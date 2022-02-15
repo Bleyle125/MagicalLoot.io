@@ -7,7 +7,7 @@ import {
   nftmarketaddress, nftaddress
 } from '../config'
 
-import Market from '../artifacts/contracts/Market.sol/NFTMarket.json'
+import Market from '../artifacts/contracts/Market.sol/Market.json'
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 
 export default function CreatorDashboard() {
@@ -28,7 +28,7 @@ export default function CreatorDashboard() {
       
     const marketContract = new ethers.Contract(nftmarketaddress, Market.abi, signer)
     const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider)
-    const data = await marketContract.fetchItemsCreated()
+    const data = await marketContract.fetchAuthorsCreations()
     
     const items = await Promise.all(data.map(async i => {
       const tokenUri = await tokenContract.tokenURI(i.tokenId)

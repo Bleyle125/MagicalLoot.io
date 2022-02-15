@@ -3,15 +3,6 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Web3Modal from "web3modal"
 
-import Contact from '../components/contact';
-import Download from '../components/download';
-import FAQ from '../components/faq';
-import Features from '../components/features';
-import Footer from '../components/footer';
-import Hero from '../components/hero';
-
-
-
 import {
   nftaddress, nftmarketaddress
 } from '../config'
@@ -26,14 +17,29 @@ if (process.env.NEXT_PUBLIC_WORKSPACE_URL) {
 }
 
 export default function Home() {
-  
   const [nfts, setNfts] = useState([])
   const [loadingState, setLoadingState] = useState('not-loaded')
   useEffect(() => {
     loadNFTs()
   }, [])
+    async function resellOwnedItem(id, price, signer) {
+    const marketContract = new ethers.Contract(
+      nftmarketaddress,
+      Market.abi,
+      signer
+    );
+  
+    const listingPrice = await marketContract.getListingPrice();
+    const tx = await marketContract.putItemToResell(
+      nftaddress,
+      id,
+      ethers.utils.parseUnits(price, "ether"),
+      { value: listingPrice.toString() }
+    );
+    await tx.wait();
+  }
   async function loadNFTs() {    
-    const provider = new ethers.providers.JsonRpcProvider("https://rpc-mumbai.matic.today")
+    const provider = new ethers.providers.JsonRpcProvider(rpcEndpoint)
     const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider)
     const marketContract = new ethers.Contract(nftmarketaddress, Market.abi, provider)
     const data = await marketContract.fetchMarketItems()
@@ -70,27 +76,20 @@ export default function Home() {
     await transaction.wait()
     loadNFTs()
   }
-  
-  if (loadingState === 'loaded' && !nfts.length) return (
-    <><div>
-      <Hero />
-      <h1 className="px-20 py-10 text-bold text-3xl text-center mt-10">No items in marketplace</h1>
-      <Features />
-      <Download />
-      <FAQ />
-      <Contact />
-      {/* Footer */}
-				<Footer />
-    </div></>)
+  if (loadingState === 'loaded' && !nfts.length) return (<h1 className="px-20 py-10 text-3xl">No items in Resale marketplace</h1>)
   return (
-    <><div>
-      <Hero />
-      <h3 className=" px-20 py-10 font-bold text-3xl text-center text-bold mt-10">Recent Drops 💎</h3>
-      <div className="flex justify-center">
-        <div className="px-4 " style={{ maxWidth: '1600px' }}>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 ">
+    <><div className='sm:w-3/4 lg:w-5/12 mx-auto px-2'>
+      <h1 className='text-3xl text-center text-template-blue'>
+        Create a Non-Fungible Token
+      </h1>
+      <p className='text-xl text-center text-template-grey mt-4'>
+       
+      </p>
+    </div><div className="flex justify-center">
+        <div className="px-4" style={{ maxWidth: '1600px' }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
             {nfts.map((nft, i) => (
-              <div key={i} className="transform duration-500 hover:-translate-y-1 shadow-2xl rounded-xl border overflow-hidden">
+              <div key={i} className="transform duration-500 hover:-translate-y-1 shadow-2xl rounded-xl border  overflow-hidden">
                 <img src={nft.image} />
                 <div className="p-4">
                   <p style={{ height: '64px' }} className="text-2xl font-semibold">{nft.name}</p>
@@ -106,16 +105,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </div>
-      <Features />
-      <Download />
-      <FAQ />
-      <Contact />
-      {/* Footer */}
-				<Footer />
-    </div>
-    </>
-    
+      </div></>
   )
-  
 }

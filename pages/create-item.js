@@ -11,7 +11,7 @@ import {
 } from '../config'
 
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
-import Market from '../artifacts/contracts/Market.sol/NFTMarket.json'
+import Market from '../artifacts/contracts/Market.sol/Market.json'
 
 export default function CreateItem() {
   const [fileUrl, setFileUrl] = useState(null)
@@ -77,38 +77,41 @@ export default function CreateItem() {
   }
 
   return (
-    <div className="flex justify-center">
-      <div className="w-1/2 flex flex-col pb-12">
-        <input 
-          placeholder="Asset Name"
-          className="mt-8 border rounded p-4"
-          onChange={e => updateFormInput({ ...formInput, name: e.target.value })}
-        />
-        <textarea
-          placeholder="Asset Description"
-          className="mt-2 border rounded p-4"
-          onChange={e => updateFormInput({ ...formInput, description: e.target.value })}
-        />
-        <input
-          placeholder="Asset Price in Eth"
-          className="mt-2 border rounded p-4"
-          onChange={e => updateFormInput({ ...formInput, price: e.target.value })}
-        />
-        <input
-          type="file"
-          name="Asset"
-          className="my-4"
-          onChange={onChange}
-        />
-        {
-          fileUrl && (
+    <><div className='sm:w-3/4 lg:w-5/12 mx-auto px-2'>
+      <h1 className='text-3xl font-bold text-center text-template-blue mt-4'>
+        Create a Non-Fungible Token
+      </h1>
+      <p className='text-xl text-center text-template-grey mt-4'>
+      You can now create your NFT and put it in the marketplace by filling in the details below.
+
+      </p>
+    </div><div className="flex justify-center">
+        <div className="w-1/2 flex flex-col pb-12">
+          <input
+            placeholder="Asset Name"
+            className="mt-8 border rounded p-4"
+            onChange={e => updateFormInput({ ...formInput, name: e.target.value })} />
+          <textarea
+            placeholder="Asset Description"
+            className="mt-2 border rounded p-4"
+            onChange={e => updateFormInput({ ...formInput, description: e.target.value })} />
+          <input
+            placeholder="Asset Price in Eth"
+            className="mt-2 border rounded p-4"
+            onChange={e => updateFormInput({ ...formInput, price: e.target.value })} />
+          <input
+            type="file"
+            name="Asset"
+            className="my-4"
+            onChange={onChange} />
+          {fileUrl && (
             <img className="rounded mt-4" width="350" src={fileUrl} />
-          )
-        }
-        <button onClick={createMarket} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
-          Create Digital Asset
-        </button>
-      </div>
-    </div>
+          )}
+          <button onClick={createMarket} className=" btn btn-purple font-bold  mt-4 text-white rounded p-4 gap-4 shadow-lg">
+
+            Create Digital Asset
+          </button>
+        </div>
+      </div></>
   )
 }
