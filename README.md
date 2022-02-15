@@ -41,6 +41,3 @@ npm run dev
 ```
 
 
-#� �M�a�g�i�c�a�l�L�o�o�t�.�i�o�
-�
-�
