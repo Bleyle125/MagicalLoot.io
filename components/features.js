@@ -14,10 +14,10 @@ const Features = () => {
 			{/* Feature #1 */}
 			<div className='relative mt-20 lg:mt-30'>
 				<div className='container flex flex-col lg:flex-row items-center justify-center gap-x-24'>
-			<article class="shadow-lg mx-auto relative max-w-md group cursor-pointer ">
-              <div class="overflow-hidden rounded-md">
-                 <img class="w-full h-auto transform hover:scale-110 duration-200 " src="/img/Wambua.jpg" alt="" />
-				 <span class="absolute right-4 top-4 bg-gray-600 text-white rounded-md p-1 pl-4 pr-4 font-semibold">Shady-Power of Art</span>
+			<article className="shadow-lg mx-auto relative max-w-md group cursor-pointer ">
+              <div className="overflow-hidden rounded-md">
+                 <img clasName="w-full h-auto transform hover:scale-110 duration-200 " src="/img/Wambua.jpg" alt="" />
+				 <span className="absolute right-4 top-4 bg-gray-600 text-white rounded-md p-1 pl-4 pr-4 font-semibold">Shady-Power of Art</span>
               </div>
             </article>
 					<div className='flex flex-1 flex-col items-center lg:items-start'>
@@ -36,10 +36,10 @@ const Features = () => {
 
 			<div className='relative mt-20 lg:mt-40'>
 				<div className='container flex flex-col lg:flex-row-reverse items-center justify-center gap-x-24'>
-				<article class="shadow-lg mx-auto relative max-w-md group cursor-pointer">
-              <div class="overflow-hidden rounded-md">
-                 <img class="w-full h-auto transform hover:scale-110 duration-200" src="/img/StillDroppingBangers.jpg" alt="" />
-				 <span class="absolute right-4 top-4 bg-gray-600 text-white rounded-md p-1 pl-4 pr-4 font-semibold">Louis Sauce-Still Dropping Bangers</span>
+				<article className="shadow-lg mx-auto relative max-w-md group cursor-pointer">
+              <div className="overflow-hidden rounded-md">
+                 <img className="w-full h-auto transform hover:scale-110 duration-200" src="/img/StillDroppingBangers.jpg" alt="" />
+				 <span className="absolute right-4 top-4 bg-gray-600 text-white rounded-md p-1 pl-4 pr-4 font-semibold">Louis Sauce-Still Dropping Bangers</span>
               </div>
             </article>
 					<div className='flex flex-1 flex-col items-center lg:items-start'>
@@ -60,10 +60,10 @@ const Features = () => {
 			{/* Feature #3 */}
 			<div className='relative mt-20 lg:mt-40'>
 				<div className='container flex flex-col lg:flex-row items-center justify-center gap-x-24'>
-				<article class="shadow-lg mx-auto relative max-w-md group cursor-pointer">
-              <div class="overflow-hidden rounded-md">
-                 <img class="w-full h-auto transform hover:scale-110 duration-200" src="/img/DripNiSick.jpg" alt="" />
-				 <span class="absolute right-4 top-4 bg-gray-600 text-white rounded-md p-1 pl-4 pr-4 font-semibold">Louis Sauce-Drip Ni Sick</span>
+				<article className="shadow-lg mx-auto relative max-w-md group cursor-pointer">
+              <div className="overflow-hidden rounded-md">
+                 <img className="w-full h-auto transform hover:scale-110 duration-200" src="/img/DripNiSick.jpg" alt="" />
+				 <span className="absolute right-4 top-4 bg-gray-600 text-white rounded-md p-1 pl-4 pr-4 font-semibold">Louis Sauce-Drip Ni Sick</span>
               </div>
             </article>
 					<div className='flex flex-1 flex-col items-center lg:items-start'>

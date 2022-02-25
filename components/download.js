@@ -14,34 +14,34 @@ const Download = () => {
 			{/* Cards */}
 			<div className='container grid  md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-screen-lg mt-16'>
 				{/* Card */}
-				<article class="mx-auto max-w-sm pb-8 bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 rounded-xl">
-                <img class="mx-auto mb-20 mt-10 w-40" src="/img/metamask.svg" alt="" />
-                <h1 class="text-center text-5xl mt-4 font-bold min-h-18 px-12">1.</h1>
-                <h2 class="text-center text-3xl mt-4 font-bold min-h-18 px-12">
+				<article className="mx-auto max-w-sm pb-8 bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 rounded-xl">
+                <img className="mx-auto mb-20 mt-10 w-40" src="/img/metamask.svg" alt="" />
+                <h1 className="text-center text-5xl mt-4 font-bold min-h-18 px-12">1.</h1>
+                <h2 className="text-center text-3xl mt-4 font-bold min-h-18 px-12">
                     Set up your Account
                 </h2>
-                <p class="m-4 text-lg p-4 leading-relaxed text-center ">
+                <p className="m-4 text-lg p-4 leading-relaxed text-center ">
                     To login with Metamask, create a Metamask account, add the browser extention and click the login button.
                 </p>
             </article>
-			<article class="mx-auto max-w-sm pb-8 bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 rounded-xl">
-                <img class="mx-auto mb-20 mt-10 w-40" src="/img/ShoppingCart.svg" alt="" />
-                <h1 class="text-center text-5xl mt-4 font-bold min-h-18 px-12">2.</h1>
-                <h2 class="text-center text-3xl mt-4 font-bold min-h-18 px-12">
+			<article className="mx-auto max-w-sm pb-8 bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 rounded-xl">
+                <img className="mx-auto mb-20 mt-10 w-40" src="/img/ShoppingCart.svg" alt="" />
+                <h1 className="text-center text-5xl mt-4 font-bold min-h-18 px-12">2.</h1>
+                <h2 className="text-center text-3xl mt-4 font-bold min-h-18 px-12">
                     
                     Purchase an NFT
                 </h2>
-                <p class="m-4 text-lg p-4 leading-relaxed text-center ">
+                <p className="m-4 text-lg p-4 leading-relaxed text-center ">
                     Buy Now, or Bid your favourite NFT.
                 </p>
             </article>
-			<article class="mx-auto max-w-sm pb-8 bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 rounded-xl">
-                <img class="mx-auto mb-20 mt-10 w-40" src="/img/stack-of-photos-svgrepo-com.svg" alt="" />
-                <h1 class="text-center text-5xl mt-4 font-bold min-h-18 px-12">3.</h1>
-                <h2 class="text-center text-3xl mt-4 font-bold min-h-18 px-12">
+			<article className="mx-auto max-w-sm pb-8 bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 rounded-xl">
+                <img className="mx-auto mb-20 mt-10 w-40" src="/img/stack-of-photos-svgrepo-com.svg" alt="" />
+                <h1 className="text-center text-5xl mt-4 font-bold min-h-18 px-12">3.</h1>
+                <h2 className="text-center text-3xl mt-4 font-bold min-h-18 px-12">
                     Enjoy your assets
                 </h2>
-                <p class="m-4 text-lg p-4 leading-relaxed text-center ">
+                <p className="m-4 text-lg p-4 leading-relaxed text-center ">
                     Interact with your NFT. Listen to music, enjoy the utilities, hold your asset or sell it in our resale market.
                 </p>
             </article>
