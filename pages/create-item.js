@@ -105,7 +105,7 @@ export default function CreateItem() {
             className="my-4"
             onChange={onChange} />
           {fileUrl && (
-            <img className="rounded mt-4" width="350" src={fileUrl} />
+            <img className="rounded mt-4" alt="" width="350" src={fileUrl} />
           )}
           <button onClick={createMarket} className=" btn btn-purple font-bold  mt-4 text-white rounded p-4 gap-4 shadow-lg">
 
