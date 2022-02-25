@@ -39,9 +39,8 @@ npx hardhat run scripts/deploy.js --network localhost
 ```
 npm run dev
 ```
+![Screenshot (22)](https://user-images.githubusercontent.com/86532040/155807966-d381ce1a-609d-4b38-bded-1ca2307df301.png)
 
-
-![Screenshot (22)](https://user-images.githubusercontent.com/86532040/155806290-807abead-cfad-4efd-ab58-a79e85761603.png)
 ![Screenshot (23)](https://user-images.githubusercontent.com/86532040/155807454-667b2369-3323-4141-8f67-c5989598e8d0.png)
 [Screenshot (26)](https://user-images.githubusercontent.com/86532040/155806359-788a2200-e774-42bb-bc40-b936dfae87ad.png)
 mages.githubusercontent.com/865![Screenshot (27)](https://user-images.githubusercontent.com/86532040/155806415-1851dbfc-6f3d-4a84-9a3c-d632a862d9a2.png)
